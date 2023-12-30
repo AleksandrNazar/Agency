@@ -1,0 +1,24 @@
+.page__wrapper {
+    font-family: 'Inter', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
+    color: #666;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+    transition: .3s;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}

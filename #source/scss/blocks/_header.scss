@@ -1,0 +1,162 @@
+#header-section {
+
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding-top: 22px;
+    padding-bottom: 18px;
+    background-color: #545ee1;
+    color: #E5E5E5;
+
+    &.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		transform: translate3d(0, 0, 0);
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+		animation-name: header-fix;
+	    animation-duration: 1s;
+
+        @keyframes header-fix {
+    		0% {
+        		opacity: 0;
+        		top: -100px;
+    		}
+
+    		100% {
+        		opacity: 1;
+        		top: 0;
+    		}
+		}
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__logo {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    .header__logo-blue {
+        color: #111784;
+    }
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav__list-link {
+    font-size: 16px;
+    color: #BDC2FF;
+    &:hover{
+        color: #ffffff;
+    }
+    &.nav__list-link--selected {
+        color: #ffffff;
+    font-weight: 700;
+    }
+}
+
+.nav-mobile {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 10;
+    background-color: #545ee1;
+    &.active {
+        display: block;
+        animation-name: nav-toggler;
+    	animation-duration: 1s;
+
+        @keyframes nav-toggler {
+		    0% {
+		        opacity: 0;
+                left: -100%;
+		    }
+
+		    100% {
+		        opacity: 1;
+                left: 0;
+		    }
+		}
+    }
+}
+
+.nav__toggle {
+	display: none;
+}
+
+.nav__toggle-button {
+	width: 35px;
+	height: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+
+	& span {
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		border-radius: 5px;
+	}
+}
+
+.nav-mobile__list {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.nav-mobile__item {
+	padding: 20px 0;
+}
+
+@media(max-width: 991px) {
+    .nav {
+        display: none;
+    }
+
+    .nav__toggle {
+		display: block;
+	}
+
+    .header__logo {
+        font-size: 30px;
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    .nav__list-link {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 576px) {
+	.nav__toggle-button {
+		width: 32px;
+		height: 20px;
+
+		& span {
+			height: 2px;
+		}
+	}
+}
