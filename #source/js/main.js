@@ -62,3 +62,24 @@ tabLinks.forEach(function(links) {
     })
 });
 
+new Swiper('.blog-slider', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    grabCursor: true,
+    autoheight: true,
+    slidesPerView: 2.2,
+    spaceBetween: 20,
+    watchOverflow: true,
+    
+    breakpoints: {
+        320: {
+            slidesPerView: 1.2,
+        },
+        768: {
+            slidesPerView: 2.2,
+        }
+    },
+});
+

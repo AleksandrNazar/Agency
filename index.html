@@ -6,8 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/swiper-bundle.js" defer></script>
+    <script src="assets/js/main.js" defer></script>   
     <title>Agency</title>
 </head>
 <body>
@@ -218,11 +220,14 @@
                                 </div>
                                 <img class="feedback__img" src="/assets/images/f2.png" alt="user photo">
                             </div>
-                            <div class="btn-slider-wrapper feedback-btn-wrapper">
+                            <div class="feedback-right_link">
+                                <a href="#">More</a>
+                            </div>
+                            <!--<div class="btn-slider-wrapper feedback-btn-wrapper">
                                 <button class="btn-slider"></button>
                                 <button class="btn-slider btn-slider-selected"></button>
                                 <button class="btn-slider"></button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -231,20 +236,26 @@
                 <div class="container">
                     <h2 class="section__title blog__title">Blog</h2>
                     <p class="section__subtitle">Creative & Proffesional Creative Agency!</p>
-                    <div class="blog-wrapper">
-                        <div class="blog">
-                            <img src="/assets/images/b1.jpg" alt="post preview" class="blog__img">
-                            <a href="#" class="blog__link" target="_blank">Free Font Alternatives: The Ultimate Guide</a>
+                    <div class="blog-slider swiper-container">
+                        <div class="blog-wrapper swiper-wrapper">
+                            <div class="blog swiper-slide">
+                                <img src="/assets/images/b1.jpg" alt="post preview" class="blog__img">
+                                <a href="#" class="blog__link" target="_blank">Free Font Alternatives: The Ultimate Guide</a>
+                            </div>
+                            <div class="blog swiper-slide">
+                                <img src="/assets/images/b2.jpg" alt="post preview" class="blog__img">
+                                <a href="#" class="blog__link" target="_blank">100 Things a UX/UI Designer Should Know</a>
+                            </div>
+                            <div class="blog swiper-slide">
+                                <img src="/assets/images/b1.jpg" alt="post preview" class="blog__img">
+                                <a href="#" class="blog__link" target="_blank">Free Font Alternatives: The Ultimate Guide</a>
+                            </div>
+                            <div class="blog swiper-slide">
+                                <img src="/assets/images/b2.jpg" alt="post preview" class="blog__img">
+                                <a href="#" class="blog__link" target="_blank">100 Things a UX/UI Designer Should Know</a>
+                            </div>
                         </div>
-                        <div class="blog">
-                            <img src="/assets/images/b2.jpg" alt="post preview" class="blog__img">
-                            <a href="#" class="blog__link" target="_blank">100 Things a UX/UI Designer Should Know</a>
-                        </div>
-                    </div>
-                    <div class="btn-slider-wrapper blog-btn-wrapper">
-                        <button class="btn-slider"></button>
-                        <button class="btn-slider btn-slider-selected"></button>
-                        <button class="btn-slider"></button>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>

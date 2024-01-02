@@ -9,8 +9,8 @@
 .blog-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
     margin: 72px 0 92px;
+    min-width: 0;
 }
 
 .blog__link {
@@ -28,8 +28,10 @@
     }
 }
 
-.blog-btn-wrapper .btn-slider {
-    background-color: rgba(84, 93, 225, 0.3);
+.blog-slider .swiper-pagination-bullet {
+    background-color: #545ee1;
+    width: 15px;
+    height: 15px;
 }
 
 @media(max-width: 991px) {
@@ -49,10 +51,6 @@
 }
 
 @media(max-width: 560px) {
-    .blog-wrapper {
-        flex-direction: column;
-        gap: 30px;
-    }
 
     .blog__link {
         font-size: 14px;
